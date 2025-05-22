@@ -1,16 +1,241 @@
----
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio de Marc</title>
+    <link rel="icon" href="/favicon.ico" />
+    <meta
+      name="description"
+      content="Portfolio of Marc Plana, full-stack developer and computer engineering student."
+    />
+    <style>
+      :root {
+        --color1: #69B9FA;
+        --color2: #7569FA;
+        --color3: #698BFA;
+        --color4: #69E6FA;
+        --color5: #A569FA;
+        --color6: #BCCBFA;
+      }
 
----
+      body {
+        font-family: Arial, sans-serif;
+        background: var(--color6);
+        color: #000000;
+        margin: 0;
+        padding: 2rem 1rem;
+        min-height: 100vh;
+      }
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+      main {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #000000;
+      }
+
+      .container {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(105, 185, 250, 0.3);
+        padding: 3rem 3rem 2rem 3rem;
+        color: #000000;
+      }
+
+      .intro {
+        max-width: 600px;
+        margin: 0 auto 3rem auto;
+        text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+        animation-delay: 0.3s;
+      }
+
+      .intro h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--color1);
+        font-weight: 700;
+      }
+
+      .intro p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        font-weight: 400;
+      }
+
+      .projects {
+        margin-top: 0;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s forwards;
+        animation-delay: 0.6s;
+      }
+
+      .projects h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--color1);
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .project-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .project-list article {
+        background: var(--color6);
+        padding: 1rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(105, 185, 250, 0.2);
+        color: #000000;
+      }
+
+      .project-list h3 {
+        margin: 0 0 0.5rem;
+        font-weight: 600;
+        font-size: 1.4rem;
+      }
+
+      .project-list p {
+        margin: 0.5rem 0 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+
+      .project-list img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin: 1rem 0;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-list a {
+        display: inline-block;
+        margin-top: 0.5rem;
+        color: var(--color2);
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      /* Margen entre enlaces seguidos */
+      .project-list a + a {
+        margin-left: 1rem;
+      }
+
+      .project-list a:hover {
+        text-decoration: underline;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 2rem 1.5rem;
+        }
+
+        .intro h1 {
+          font-size: 2.2rem;
+        }
+
+        .projects h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <section class="intro">
+          <h1>Hi, I'm Marc Plana</h1>
+          <p>
+            I'm a full-stack developer and computer engineering student
+            passionate about AI, software development & data science.
+          </p>
+          <p>
+            Welcome to my portfolio, where you can explore my projects, learn
+            more about me, and get in touch.
+          </p>
+        </section>
+
+        <section class="projects">
+          <h2>Projects</h2>
+          <div class="project-list">
+            <article class="proyecto1">
+              <h3>PATHFINDING ALGORITHM</h3>
+              <p>
+                This project implements a complete route planning system using
+                pathfinding algorithms, with a web interface in React and a
+                backend in Python (FLASK). It is designed to receive maps and
+                coordinates dynamically and calculate the shortest path,
+                integrating advanced logic such as track prioritization.
+              </p>
+              <img
+                src="/pathfinding_demo.gif"
+                alt="Pathfinding Algorithm Demo"
+              />
+              <a
+                href="https://github.com/mplanav/PATHFINDING.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pathfinding Algorithm Repository</a
+              >
+            </article>
+
+            <article class="proyecto2">
+              <h3>SWARVICE</h3>
+              <p>
+                This project is a web application that we developed with agile
+                methodology with a backend in C++, data management in
+                PostgreSQL, and a frontend with React.
+              </p>
+              <img src="/swarvice.png" alt="SWARVICE Screenshot" />
+              <a
+                href="https://github.com/AMEP-Serveis/React.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Frontend Repository</a
+              >
+              <a
+                href="https://github.com/AMEP-Serveis/Final.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Backend Repository</a
+              >
+            </article>
+
+            <article class="proyecto3">
+              <h3>HEX GAME</h3>
+              <p>
+                A strategic board game implemented in JavaScript, featuring an
+                intuitive UI and AI opponent.
+              </p>
+              <!-- Añade imagen y repositorio si los tienes -->
+            </article>
+
+            <article class="proyecto4">
+              <h3>CONECTA 4</h3>
+              <p>
+                Classic Connect 4 game recreated using HTML, CSS, and vanilla
+                JavaScript with responsive design.
+              </p>
+              <!-- Añade imagen y repositorio si los tienes -->
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
