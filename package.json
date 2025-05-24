@@ -2,7 +2,7 @@
   "name": "irregular-inclination",
   "type": "module",
   "version": "0.0.1",
-  "homepage": "https://tu-usuario.github.io/portfolio",
+  "homepage": "https://mplanav/marc-plana",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
