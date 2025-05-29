@@ -24,7 +24,7 @@ body {
 }
 
 main {
-  max-width: 900px;
+  width: 100%;
   margin: 0 auto;
   color: var(--text-dark);
 }
@@ -39,8 +39,9 @@ main {
 
 /* INTRO */
 .intro {
-  max-width: 600px;
-  margin: 0 auto 3rem auto;
+
+  max-width: 100%;
+  margin: 0 auto;
   padding: 3rem 2rem;
   text-align: center;
   background: linear-gradient(135deg, var(--color1), var(--color6));
@@ -86,7 +87,7 @@ main {
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -266,30 +267,33 @@ main {
 
 /* Animations */
 @keyframes fadeInUp {
-  to {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+
 /* Responsive */
 @media (max-width: 600px) {
-  .container {
-    padding: 2rem 1.5rem;
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-bar {
+    justify-content: center;
+    gap: 0.5rem;
   }
 
   .intro h1 {
-    font-size: 2.2rem;
-  }
-
-  .projects h2,
-  .tools h2,
-  .about-me h2,
-  .contact h2 {
     font-size: 2rem;
   }
 
-  .tools-logos img {
-    height: 32px;
+  .intro p {
+    font-size: 1rem;
   }
 }
