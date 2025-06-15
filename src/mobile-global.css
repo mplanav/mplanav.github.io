@@ -1,0 +1,133 @@
+/* global-mobile.css - Estilos optimizados para pantallas móviles */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #111;
+  padding: 1.5rem 1rem;
+}
+
+/* Contenedor general */
+.container,
+.intro,
+.about-me,
+.contact-me {
+  padding: 2rem 1.5rem;
+}
+
+/* Tipografía principal */
+.intro h1 {
+  font-size: 2.2rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.about-me h2,
+.projects h2,
+.tech-stack h2,
+.contact-me h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-me p {
+  font-size: 1rem;
+}
+
+/* Lista de proyectos */
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.project-list article {
+  max-width: 100%;
+  padding: 1.5rem 1.25rem;
+  border-radius: 0.75rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.project-list h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-list p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.project-list img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-list a {
+  display: inline-block;
+  background-color: #007aff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.project-list a:active {
+  transform: scale(0.98);
+}
+
+/* Tech bar */
+.tech-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.tech-bar img {
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Contacto */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contact-links a svg {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  color: #111;
+  transition: transform 0.2s;
+}
+
+.contact-links a:active svg {
+  transform: scale(0.95);
+}
+
+/* Ajuste de scroll anchor */
+section {
+  scroll-margin-top: 80px;
+}

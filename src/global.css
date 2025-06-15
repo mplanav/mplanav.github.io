@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: "Trebuchet MS", sans-serif; /* Trebuchet MS es sans-serif */
+  font-family: system-ui, sans-serif;/* Trebuchet MS es sans-serif */
   background: linear-gradient(135deg, #f5f5f5, #dcdcdc);
   color: var(--text-dark);
   margin: 0;
@@ -102,7 +102,7 @@ main {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 .project-list {
@@ -123,7 +123,7 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
   height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 .project-list article:hover {
