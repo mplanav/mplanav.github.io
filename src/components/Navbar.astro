@@ -1,86 +1,14 @@
 ---
 ---
 <nav class="navbar" role="navigation" aria-label="Main Navigation">
-  <a href="#about">HOME</a>
-  <a href="#projects">PROJECTS</a>
-  <a href="#tech-stack">TECHNOLOGIES</a>
-  <a href="#about-me">ABOUT ME</a>
-  <a href="#contact-me">CONTACT ME</a>
+  <div class="navbar-container">
+    <div class="navbar-links">
+      <a href="#about">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#tech-stack">Technologies</a>
+      <a href="#about-me">About</a>
+      <a href="#contact-me">Contact</a>
+    </div>
+  </div>
 </nav>
 <div class="navbar-spacer"></div>
-
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-family: "Trebuchet MS", serif;
-    font-size: 1.125rem; /* 18px */
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: saturate(180%) blur(12px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    align-items: center;
-    padding: 1rem 2rem;
-    z-index: 10000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap;
-  }
-
-  .navbar a {
-    color: var(--color2, black);
-    text-decoration: none;
-    font-weight: 700;
-    position: relative;
-    padding: 0.5rem 0;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-
-  .navbar a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 3px;
-    background: var(--color2);
-    border-radius: 3px;
-    transition: width 0.3s ease;
-  }
-
-  .navbar a:hover,
-  .navbar a:focus {
-    color: var(--color5);
-    outline: none;
-  }
-
-  .navbar a:hover::after,
-  .navbar a:focus::after {
-    width: 100%;
-  }
-
-  /* Espaciador para compensar navbar fijo */
-  .navbar-spacer {
-    height: 64px;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    .navbar {
-      gap: 1.5rem;
-      padding: 1rem 1rem;
-      font-size: 1rem; /* 16px */
-    }
-    .navbar a {
-      padding: 0.4rem 0;
-    }
-  }
-</style>
