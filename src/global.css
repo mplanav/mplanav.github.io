@@ -1,19 +1,16 @@
 :root {
-  /* Paleta adaptada a la foto: tonos oscuros, grises y acentos azulados */
-  --color1: #121212;          /* Fondo general muy oscuro */
-  --color2: #4b5563;          /* Gris medio, para textos secundarios */
-  --color3: #1f2937;          /* Fondo de secciones y cards */
-  --color4: #374151;          /* Fondo secundario para elementos */
-  --color5: #e0e7ff;          /* Texto claro */
-  --color6: #9ca3af;          /* Gris claro para bordes y sombras */
-  --color-accent: #3b82f6;   /* Azul brillante, acento principal */
-
-  --text-dark: #f9fafb;       /* Texto principal claro */
-  --text-light: #1f2937;      /* Texto oscuro para fondos claros */
-  --text-secondary: #9ca3af;  /* Texto secundario gris */
+  --color1: #121212;
+  --color2: #4b5563;
+  --color3: #1f2937;
+  --color4: #374151;
+  --color5: #e0e7ff;
+  --color6: #9ca3af;
+  --color-accent: #3b82f6;
+  --text-dark: #f9fafb;
+  --text-light: #1f2937;
+  --text-secondary: #9ca3af;
 }
 
-/* Reset & Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,12 +26,11 @@ body {
   overflow-x: hidden;
 }
 
-/* NAVBAR: top-right corner, minimal, fixed */
 nav {
   position: fixed;
   top: 20px;
   right: 20px;
-  background: rgba(31, 41, 55, 0.85); /* Fondo oscuro translúcido */
+  background: rgba(31, 41, 55, 0.85);
   backdrop-filter: blur(12px);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.7);
@@ -57,11 +53,10 @@ nav a:hover {
   color: var(--color-accent);
 }
 
-/* HERO FULLSCREEN */
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url('/fotofondo.jpg'); /* Aquí asegúrate que la ruta sea correcta */
+  background-image: url('/fotofondo.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,7 +73,7 @@ nav a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(18, 18, 18, 0.7); /* overlay oscuro más intenso para mejor contraste */
+  background: rgba(18, 18, 18, 0.7);
   z-index: 0;
 }
 
@@ -88,14 +83,13 @@ nav a:hover {
   display: flex;
   max-width: 1200px;
   width: 100%;
-  background: rgba(31, 41, 55, 0.85); /* fondo oscuro translúcido */
+  background: rgba(31, 41, 55, 0.85);
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.7);
   overflow: hidden;
   animation: fadeInUp 1s forwards;
 }
 
-/* Contenedor flexible para que contenido y foto estén lado a lado */
 .hero-content {
   flex: 2;
   padding: 3rem 2rem;
@@ -105,7 +99,6 @@ nav a:hover {
   background: transparent;
 }
 
-/* Foto a la derecha */
 .hero-photo {
   flex: 1;
   display: flex;
@@ -115,14 +108,13 @@ nav a:hover {
   background: transparent;
 }
 
-/* Foto redonda con sombra azulada */
 .hero-photo img {
   width: 180px;
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6); /* sombra azul */
-  border: 4px solid rgba(59, 130, 246, 0.7); /* borde azul translúcido */
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+  border: 4px solid rgba(59, 130, 246, 0.7);
   transition: transform 0.3s ease;
 }
 
@@ -162,7 +154,6 @@ nav a:hover {
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.9);
 }
 
-/* SECTIONS BELOW HERO */
 section {
   max-width: 1200px;
   margin: 4rem auto;
@@ -173,7 +164,6 @@ section {
   color: var(--text-dark);
 }
 
-/* PROJECTS SECTION */
 .projects {
   animation: fadeInUp 1s forwards;
   animation-delay: 0.5s;
@@ -246,8 +236,7 @@ section {
 .project-info a:hover {
   background: var(--color5);
   box-shadow: 0 6px 16px rgba(59, 130, 246, 0.7);
-  color:
-   var(--text-light);
+  color: var(--text-light);
 }
 
 .btn-backend {
@@ -269,9 +258,8 @@ section {
   color: var(--text-light);
 }
 
-/* Modal styles */
 .modal {
-  display: none; /* hidden by default */
+  display: none;
   position: fixed;
   z-index: 1500;
   left: 0;
@@ -316,7 +304,6 @@ section {
   user-select: none;
 }
 
-/* OTHER SECTIONS: ABOUT, TECH STACK, CONTACT */
 .tech-stack,
 .about-me,
 .contact-me {
@@ -377,7 +364,6 @@ section {
   color: var(--color-accent);
 }
 
-/* RESPONSIVE HERO */
 @media (max-width: 900px) {
   .hero-inner {
     flex-direction: column;
@@ -399,7 +385,6 @@ section {
   }
 }
 
-/* Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
