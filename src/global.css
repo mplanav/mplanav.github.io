@@ -364,6 +364,30 @@ section {
   color: var(--color-accent);
 }
 
+footer.footer {
+  background: var(--color3);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 16px 16px;
+}
+
+footer.footer a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer.footer a:hover {
+  color: var(--color5);
+  text-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
+}
+
 @media (max-width: 900px) {
   .hero-inner {
     flex-direction: column;
