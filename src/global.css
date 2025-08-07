@@ -179,45 +179,71 @@ section {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
+/* === Versión FINAL con patrón vertical para todo === */
 .project-card {
   background: var(--color4);
   border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;  /* fuerza columna */
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  gap: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.6);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.5);
 }
 
 .project-card img,
 .project-card video {
   border-radius: 12px;
-  margin: 1rem 0;
-  max-width: 100%;
+  width: 50%;        /* Cambiado a la mitad del ancho */
+  max-width: 350px;  /* Limitar tamaño máximo para que no se vea gigante en pantallas grandes */
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.project-card img:hover,
+.project-card video:hover {
+  transform: scale(1.02);
+}
+
+.project-info {
+  margin-top: 0;
+  max-width: 700px;
 }
 
 .project-info h3 {
-  color: var(--color-accent);
-  font-size: 1.75rem;
-  margin-bottom: 0.75rem;
+  color: var(--color5);
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  text-shadow: 0 0 3px rgba(59, 130, 246, 0.3);
 }
 
 .project-info p {
   color: var(--text-secondary);
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-info .contributors {
+  font-style: italic;
+  color: var(--color6);
+  font-size: 0.85rem;
 }
 
 .project-info a {
@@ -225,20 +251,39 @@ section {
   margin-top: 1rem;
   background: var(--color-accent);
   color: var(--text-dark);
-  padding: 0.5rem 1.25rem;
-  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .project-info a:hover {
   background: var(--color5);
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.7);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
   color: var(--text-light);
+  transform: translateY(-2px);
 }
 
+/* Ya no se aplica diseño horizontal en desktop, queda igual que móvil */
+@media (min-width: 768px) {
+  .project-card {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+  .project-card img,
+  .project-card video {
+    max-width: 100%;
+  }
+  .project-info {
+    margin-top: 0;
+  }
+}
+
+
+/* Botón backend */
 .btn-backend {
   margin-top: 1rem;
   background: var(--color-accent);
@@ -304,6 +349,8 @@ section {
   user-select: none;
 }
 
+/* ===== Aplicar mismo patrón vertical centrado a otras secciones ===== */
+
 .tech-stack,
 .about-me,
 .contact-me {
@@ -314,14 +361,19 @@ section {
   text-align: center;
   margin-top: 4rem;
   color: var(--text-dark);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .tech-stack h2,
 .about-me h2,
 .contact-me h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: var(--color5);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .tech-icons {
@@ -332,10 +384,10 @@ section {
 }
 
 .tech-icons img {
-  height: 48px;
+  height: 44px;
   background: var(--color6);
-  padding: 8px;
-  border-radius: 12px;
+  padding: 6px;
+  border-radius: 10px;
   box-shadow: 0 2px 6px rgba(59, 130, 246, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -356,12 +408,32 @@ section {
   color: var(--color2);
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .contact-links a:hover {
   transform: translateY(-5px);
   color: var(--color-accent);
+}
+.btn-cv {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--color-accent);
+  color: var(--text-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-cv:hover {
+  background: var(--color5);
+  color: var(--text-light);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.9);
+  transform: translateY(-2px);
 }
 
 footer.footer {
