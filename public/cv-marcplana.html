@@ -6,15 +6,11 @@
   <title>Marc Plana Villalbi - Curriculum Vitae</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', sans-serif;
-      background: #f5f7fa;
-      color: #333;
+      background: #f8f9fa;
+      color: #222;
       padding: 2rem;
       line-height: 1.6;
     }
@@ -23,157 +19,132 @@
       margin: auto;
       background: #fff;
       padding: 2.5rem 3rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    }
-    h1, h2 {
-      color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      color: #0d1b2a;
       font-weight: 700;
+      margin-bottom: 0.2rem;
     }
     h2 {
-      font-size: 1.8rem;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      color: #003366;
       font-weight: 600;
-      border-bottom: 2px solid #3b82f6;
-      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 0.2rem;
     }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #005fa3;
-      text-decoration: underline;
-    }
-    .info p {
-      margin-bottom: 0.3rem;
-      font-weight: 500;
-    }
-    .info a {
-      font-weight: 600;
-    }
-    .summary p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-    ul {
-      margin-left: 1.5rem;
-      list-style-type: disc;
-      margin-bottom: 1rem;
-    }
-    ul li {
-      margin-bottom: 0.5rem;
-    }
-    .dual {
+    a { color: #0056b3; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact p { margin-bottom: 0.3rem; }
+    ul { margin-left: 1.2rem; margin-bottom: 1rem; }
+    ul li { margin-bottom: 0.4rem; }
+    .two-column {
       display: flex;
-      justify-content: space-between;
-      gap: 3rem;
       flex-wrap: wrap;
+      gap: 2.5rem;
     }
-    .dual > div {
-      flex: 1;
-      min-width: 280px;
-    }
-    /* Responsive */
+    .two-column > div { flex: 1; min-width: 260px; }
     @media (max-width: 600px) {
-      .dual {
-        flex-direction: column;
-      }
+      .two-column { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <div class="container" role="main" aria-label="Curriculum Vitae de Marc Plana Villalbi">
+  <div class="container" role="main">
+    
+    <!-- Encabezado -->
     <h1>Marc Plana Villalbi</h1>
-    <p><strong>Estudiante de Ingeniería Informática | Computer Engineering Student</strong></p>
-
-    <section class="info" aria-label="Información de contacto">
+    <p><strong>Estudiante de Ingeniería Informática</strong></p>
+    
+    <!-- Contacto -->
+    <section class="contact">
       <p>Barcelona, España</p>
       <p><a href="mailto:marc.planavillalbi@gmail.com">marc.planavillalbi@gmail.com</a></p>
       <p>+34 601 33 61 98</p>
       <p>
-        <a href="https://www.linkedin.com/in/marc-plana-villalb%C3%AD-68299a304/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
-        <a href="https://github.com/mplanav" target="_blank" rel="noopener noreferrer">GitHub</a> |
-        <a href="https://mplanav.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="https://www.linkedin.com/in/marc-plana-villalb%C3%AD-68299a304/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/mplanav" target="_blank">GitHub</a> |
+        <a href="https://mplanav.github.io/" target="_blank">Portfolio</a>
       </p>
     </section>
 
-    <section class="summary" aria-label="Resumen profesional">
-      <h2>Resumen / Summary</h2>
+    <!-- Perfil -->
+    <section>
+      <h2>Perfil profesional</h2>
       <p>
-        Soy una persona apasionada por la informática y el aprendizaje constante. Me esfuerzo por alcanzar la excelencia en cada proyecto, enfrentando desafíos con disciplina y dedicación. Mi objetivo es crecer profesionalmente y aportar soluciones significativas, combinando mis conocimientos técnicos con habilidades interpersonales.
-      </p>
-      <p>
-        I am passionate about computer engineering and lifelong learning. I strive for excellence in every project, tackling challenges with discipline and dedication. My goal is to grow professionally and deliver meaningful solutions by combining technical skills with interpersonal strengths.
+        Estudiante de Ingeniería Informática apasionado por la tecnología, el aprendizaje continuo y la resolución de problemas complejos. Me caracterizo por afrontar los retos con disciplina, pensamiento crítico y una sólida combinación de conocimientos técnicos y competencias interpersonales.
       </p>
     </section>
 
-    <section class="experience" aria-label="Experiencia profesional">
-      <h2>Experiencia / Experience</h2>
+    <!-- Educación -->
+    <section>
+      <h2>Formación académica</h2>
       <ul>
-        <li><strong>Camarero</strong> – Braco (Jun 2021 – Ago 2021)</li>
-        <li><strong>Profesor particular</strong> (Oct 2024 – Jun 2025)</li>
-        <li><strong>Preparador físico</strong> – PB Barcino (Sep 2024 – Jun 2025)</li>
-        <li><strong>Entrenador de fútbol (juveniles)</strong> – PB Barcino (Sep 2023 – Jun 2024)</li>
-        <li><strong>Monitor de campus de fútbol de verano</strong> – PB Barcino (Jun 2024 – Jul 2024)</li>
-      </ul>
-    </section>
-
-    <section class="education" aria-label="Formación académica">
-      <h2>Educación / Education</h2>
-      <ul>
-        <li><strong>Grado en Ingeniería Informática</strong> – Universitat Politècnica de Catalunya (2021 – Presente)</li>
+        <li><strong>Grado en Ingeniería Informática</strong> – Universitat Politècnica de Catalunya (2021 – Actualidad)</li>
         <li><strong>Título de Monitor de Ocio y Tiempo Libre</strong> – CET10 (2023)</li>
         <li><strong>Dual Diploma Program</strong> – Academica International Studies (2017 – 2020)</li>
         <li><strong>Bachillerato</strong> – Escola Mare de Déu de Núria (2019 – 2021)</li>
       </ul>
     </section>
 
-    <section class="certificates" aria-label="Certificados">
-      <h2>Certificados / Certificates</h2>
+    <!-- Experiencia -->
+    <section>
+      <h2>Experiencia profesional</h2>
       <ul>
-        <li><strong>IBM Skills Network</strong> – Docker Essentials: A developer introduction | Julio 2025</li>
-        <li><strong>AWS Skill Builder</strong> – AWS Cloud Practitioner Essentials | Julio 2025</li>
+        <li><strong>Profesor particular</strong> (Oct 2024 – Jun 2025)</li>
+        <li><strong>Preparador físico</strong> – PB Barcino (Sep 2024 – Jun 2025)</li>
+        <li><strong>Entrenador de fútbol (juveniles)</strong> – PB Barcino (Sep 2023 – Jun 2024)</li>
+        <li><strong>Monitor de campus de fútbol</strong> – PB Barcino (Jun 2024 – Jul 2024)</li>
+        <li><strong>Camarero</strong> – Braco (Jun 2021 – Ago 2021)</li>
       </ul>
     </section>
 
-    <div class="dual">
-      <section class="skills" aria-label="Habilidades informáticas e intrapersonales">
-        <h2>Habilidades Informáticas / IT Skills</h2>
+    <!-- Conocimientos y competencias -->
+    <div class="two-column">
+      <div>
+        <h2>Conocimientos técnicos</h2>
         <ul>
           <li><strong>Lenguajes:</strong> JavaScript, Python, C++, Java</li>
-          <li><strong>Web:</strong> HTML, CSS, React (en aprendizaje)</li>
+          <li><strong>Desarrollo web:</strong> HTML, CSS, React (en aprendizaje)</li>
           <li><strong>Herramientas:</strong> Git, GitHub, VSCode, Trello, WordPress, Docker (en aprendizaje), WebSocket (en aprendizaje)</li>
-          <li><strong>Bases de datos:</strong> MySQL, MongoDB (nivel básico), Django (nivel básico), PostgreSQL</li>
+          <li><strong>Bases de datos:</strong> MySQL, PostgreSQL, MongoDB (básico), Django (básico)</li>
         </ul>
-
-        <h2>Habilidades Intrapersonales / Soft Skills</h2>
-        <p>
-          A lo largo de mis experiencias como profesor particular y entrenador, he aprendido a gestionar mi tiempo eficientemente, adaptarme a distintas necesidades y comunicarme con claridad para motivar y guiar a otros. La disciplina y la autoexigencia han sido claves para mantener un equilibrio entre estudio y trabajo, especialmente mientras avanzaba en mi carrera de Ingeniería Informática.
-        </p>
-        <p>
-          Durante los cursos y certificaciones que he realizado, como los de IBM y AWS, he reforzado mi capacidad para resolver problemas complejos y afrontar nuevos retos con pensamiento crítico. Estas experiencias también me han enseñado a manejar el estrés en entornos exigentes, y a trabajar colaborativamente, siempre buscando aprender del equipo y aportar soluciones.
-        </p>
-        <p>
-          El liderazgo efectivo y el trabajo en equipo son valores que he desarrollado tanto en ámbitos deportivos como académicos, entendiendo que el éxito es fruto de la suma de esfuerzos y el respeto mutuo.
-        </p>
-      </section>
-
-      <section class="languages" aria-label="Idiomas">
-        <h2>Idiomas / Languages</h2>
+      </div>
+      <div>
+        <h2>Competencias</h2>
         <ul>
-          <li>Inglés / English – B2 (First Certificate)</li>
-          <li>Catalán / Catalan – Nativo / Native</li>
-          <li>Castellano / Spanish – Nativo / Native</li>
+          <li>Gestión del tiempo y adaptación a diferentes entornos</li>
+          <li>Comunicación efectiva y liderazgo</li>
+          <li>Trabajo en equipo y resolución de problemas</li>
+          <li>Disciplina, autoexigencia y pensamiento crítico</li>
         </ul>
-      </section>
+      </div>
     </div>
+
+    <!-- Idiomas -->
+    <section>
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Inglés – B2 (First Certificate)</li>
+        <li>Catalán – Nativo</li>
+        <li>Castellano – Nativo</li>
+      </ul>
+    </section>
+
+    <!-- Certificaciones -->
+    <section>
+      <h2>Certificaciones</h2>
+      <ul>
+        <li>IBM Skills Network – Docker Essentials: A developer introduction (Jul 2025)</li>
+        <li>AWS Skill Builder – AWS Cloud Practitioner Essentials (Jul 2025)</li>
+        <li>IBM Skills Network – Python for Data Science (Ago 2025)</li>
+      </ul>
+    </section>
+
   </div>
 </body>
 </html>
