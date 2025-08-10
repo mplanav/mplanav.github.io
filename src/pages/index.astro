@@ -20,204 +20,194 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <h2>Projects</h2>
+  <div class="project-grid">
 
-      <article class="project-card">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          controls
-        >
-          <source src="/pathfinding.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="project-info">
-          <h3>Pathfinding Algorithm</h3>
-          <p>
-            This interactive visualizer was a hands-on opportunity to deepen my knowledge of React and backend APIs with Flask. Designing intuitive user interactions while ensuring efficient pathfinding logic challenged me to blend creativity with technical rigor.
-          </p>
-          <a href="https://github.com/mplanav/PATHFINDING.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <!-- Destacados (visibles) -->
+    <article class="project-card">
+      <video autoplay muted loop playsinline controls>
+        <source src="/pathfinding.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-info">
+        <h3>Pathfinding Algorithm</h3>
+        <p>
+          This interactive visualizer was a hands-on opportunity to deepen my knowledge of React and backend APIs with Flask. Designing intuitive user interactions while ensuring efficient pathfinding logic challenged me to blend creativity with technical rigor.
+        </p>
+        <p><strong>Stack:</strong> React, Flask, CSS</p>
+        <a href="https://github.com/mplanav/PATHFINDING.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <img src="/swarvice.png" alt="Swarvice Screenshot" />
-        <div class="project-info">
-          <h3>Swarvice</h3>
-          <p>
-            Building Swarvice helped me understand the complexities of full-stack development with C++, PostgreSQL, and React. It was a rewarding experience in integrating robust backend services with a dynamic frontend.
-          </p>
-          <a href="https://github.com/mplanav/SWARVICE.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <article class="project-card">
+      <video autoplay muted loop playsinline controls>
+        <source src="/groupy.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-info">
+        <h3>Groupy</h3>
+        <p>
+          This project challenged me to explore distributed systems through Erlang, focusing on group membership and synchronized state — an exciting dive into concurrency and fault tolerance.
+        </p>
+        <p><strong>Stack:</strong> Erlang, Distributed Systems</p>
+        <a href="https://github.com/mplanav/SODX-groupy.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <img src="/HEX_GAME2.gif" alt="HEX game demo" />
-        <div class="project-info">
-          <h3>Hex Game</h3>
-          <p>
-            Creating an AI for this board game using Minimax and alpha-beta pruning gave me practical insight into game theory algorithms and JavaScript/Java programming. I enjoyed translating complex strategies into efficient code.
-          </p>
-          <a href="https://github.com/mplanav/PROP-HEX.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <article class="project-card">
+      <video autoplay muted loop playsinline controls>
+        <source src="/Research-Assistant-CLI-Tool.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-info">
+        <h3>Research Assistant CLI Tool</h3>
+        <p>
+          By leveraging LangChain and LLMs, I built this CLI tool to automate research tasks, integrating APIs like DuckDuckGo and Wikipedia with Pydantic validation — a project that sharpened my skills in AI and software automation.
+        </p>
+        <p><strong>Stack:</strong> LangChain, LLMs, Python, Pydantic</p>
+        <a href="https://github.com/mplanav/AI-agent-from-scratch.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <img src="/CONECTA4.gif" alt="Connect 4 demo" />
-        <div class="project-info">
-          <h3>Connect 4</h3>
-          <p>
-            This Java-based AI project pushed me to fine-tune heuristics and enhance decision-making algorithms, improving both my problem-solving skills and understanding of AI fundamentals.
-          </p>
-          <a href="https://github.com/mplanav/CONECTA4-PROP.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <article class="project-card">
+      <video autoplay muted loop playsinline controls>
+        <source src="/output.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-info">
+        <h3>Discyn</h3>
+        <p>
+          Working alongside Martinazoo, I helped develop this mobile gym app combining React Native, FastAPI, and PostgreSQL. It was a great opportunity to dive into mobile development and backend integration.
+        </p>
+        <p class="contributors">
+          With: Martinazoo
+        </p>
+        <p><strong>Stack:</strong> React Native, CSS, FastAPI, PostgreSQL</p>
+        <a href="https://github.com/mplanav/DISCYN.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          controls
-        >
-          <source src="/dynamic_route.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="project-info">
-          <h3>On-Demand Vehicle Routing</h3>
-          <p>
-            Collaborating with JayexDesigns and MarcPuertss, I helped develop a real-time routing system leveraging FastAPI and WebSockets. Containerizing it with Docker was key to streamline deployment and scalability.
-          </p>
-          <p class="contributors">
-            With: JayexDesigns, MarcPuertss
-          </p>
-          <a href="https://github.com/mplanav/On-Demand-Vehicle-Routing.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <!-- Ocultos inicialmente -->
+    <article class="project-card hidden">
+      <img src="/swarvice.png" alt="Swarvice Screenshot" />
+      <div class="project-info">
+        <h3>Swarvice</h3>
+        <p>
+          Building Swarvice helped me understand the complexities of full-stack development with C++, PostgreSQL, and React. It was a rewarding experience in integrating robust backend services with a dynamic frontend.
+        </p>
+        <p><strong>Stack:</strong> C++, PostgreSQL, React</p>
+        <a href="https://github.com/mplanav/SWARVICE.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          controls
-        >
-          <source src="/text-to-speech.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="project-info">
-          <h3>Text to Speech Web</h3>
-          <p>
-            Inspired by my IBM Docker certification, I built this simple app to experiment with containerization and voice synthesis, merging practical skills with creative coding.
-          </p>
-          <a href="https://github.com/mplanav/text-to-speech.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <article class="project-card hidden">
+      <img src="/HEX_GAME2.gif" alt="HEX game demo" />
+      <div class="project-info">
+        <h3>Hex Game</h3>
+        <p>
+          Creating an AI for this board game using Minimax and alpha-beta pruning gave me practical insight into game theory algorithms and JavaScript/Java programming. I enjoyed translating complex strategies into efficient code.
+        </p>
+        <p><strong>Stack:</strong> JavaScript, Java, NetBeans</p>
+        <a href="https://github.com/mplanav/PROP-HEX.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          controls
-        >
-          <source src="/output.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="project-info">
-          <h3>Discyn</h3>
-          <p>
-            Working alongside Martinazoo, I helped develop this mobile gym app combining React Native, FastAPI, and PostgreSQL. It was a great opportunity to dive into mobile development and backend integration.
-          </p>
-          <p class="contributors">
-            With: Martinazoo
-          </p>
-          <a href="https://github.com/mplanav/DISCYN.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <article class="project-card hidden">
+      <img src="/CONECTA4.gif" alt="Connect 4 demo" />
+      <div class="project-info">
+        <h3>Connect 4</h3>
+        <p>
+          This Java-based AI project pushed me to fine-tune heuristics and enhance decision-making algorithms, improving both my problem-solving skills and understanding of AI fundamentals.
+        </p>
+        <p><strong>Stack:</strong> Java, NetBeans</p>
+        <a href="https://github.com/mplanav/CONECTA4-PROP.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          controls
-        >
-          <source src="/groupy.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="project-info">
-          <h3>Groupy</h3>
-          <p>
-            This project challenged me to explore distributed systems through Erlang, focusing on group membership and synchronized state — an exciting dive into concurrency and fault tolerance.
-          </p>
-          <a href="https://github.com/mplanav/SODX-groupy.git" target="_blank">View Project</a>
-        </div>
-      </article>
+    <article class="project-card hidden">
+      <video autoplay muted loop playsinline controls>
+        <source src="/dynamic_route.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-info">
+        <h3>On-Demand Vehicle Routing</h3>
+        <p>
+          Collaborating with JayexDesigns and MarcPuertss, I helped develop a real-time routing system leveraging FastAPI and WebSockets. Containerizing it with Docker was key to streamline deployment and scalability.
+        </p>
+        <p class="contributors">
+          With: JayexDesigns, MarcPuertss
+        </p>
+        <p><strong>Stack:</strong> FastAPI, WebSockets, Docker</p>
+        <a href="https://github.com/mplanav/On-Demand-Vehicle-Routing.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
-      <article class="project-card">
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          controls
-        >
-          <source src="/Research-Assistant-CLI-Tool.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="project-info">
-          <h3>Research Assistant CLI Tool</h3>
-          <p>
-            By leveraging LangChain and LLMs, I built this CLI tool to automate research tasks, integrating APIs like DuckDuckGo and Wikipedia with Pydantic validation — a project that sharpened my skills in AI and software automation.
-          </p>
-          <a href="https://github.com/mplanav/AI-agent-from-scratch.git" target="_blank">View Project</a>
-        </div>
-      </article>
-    </div>
-  </section>
+    <article class="project-card hidden">
+      <video autoplay muted loop playsinline controls>
+        <source src="/text-to-speech.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="project-info">
+        <h3>Text to Speech Web</h3>
+        <p>
+          Inspired by my IBM Docker certification, I built this simple app to experiment with containerization and voice synthesis, merging practical skills with creative coding.
+        </p>
+        <p><strong>Stack:</strong> Docker, Flask, Node JS</p>
+        <a href="https://github.com/mplanav/text-to-speech.git" target="_blank">View GitHub</a>
+      </div>
+    </article>
 
- <!-- TECH STACK -->
-<section class="tech-stack" id="tech-stack">
-  <h2>Tools & Technologies</h2>
-  <div class="tech-icons">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" title="FastAPI" />
-    <img src="https://netbeans.apache.org/_/images/apache-netbeans.svg" alt="Netbeans" title="Netbeans" />
-    <img src="/websocket.png" alt="WebSocket" title="WebSocket" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" title="VSCode" />
-    <img src="/Linux.svg" alt="Linux" title="Linux" />
-    <img src="/SQLAlchemy.svg" alt="SQLAlchemy" title="SQLAlchemy" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Trello" title="Trello" />
-    <!-- Nuevos añadidos -->
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/erlang/erlang-original.svg" alt="Erlang" title="Erlang" />
-    <img src="/aws.svg" alt="AWS" title="AWS" style="width:40px; heigh:40px" />
-    <img src="/langchain-color.svg" alt="LangChain" title="LangChain" style="width:40px; height:40px;" />
   </div>
 </section>
+
+<section class="tech-stack" id="tech-stack">
+  <h2>Tools & Technologies</h2>
+
+  <details>
+    <summary><h3>Languages</h3></summary>
+    <div class="tech-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/erlang/erlang-original.svg" alt="Erlang" title="Erlang" />
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>Frameworks & Libraries</h3></summary>
+    <div class="tech-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" title="Next.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro" title="Astro" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" title="Express" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" title="FastAPI" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactnative/reactnative-original.svg" alt="React Native" title="React Native" />
+      <img src="/ollama.svg" alt="Ollama" title="Ollama" height="40px" width="40px"/>
+      <img src="langchain-color.svg" alt="LangChain" title="LangChain" height="40px" width="40px"/>
+      
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>Databases & Tools</h3></summary>
+    <div class="tech-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub" />
+    </div>
+  </details>
+</section>
+
+
 
 <!-- BADGES & CERTIFICATES -->
 <section class="badges-certificates" id="badges-certificates">
@@ -269,29 +259,63 @@ import Layout from "../layouts/Layout.astro";
 
 
 
-  <!-- ABOUT -->
-  <section class="about-me" id="about-me">
-    <h2>About Me</h2>
-    <div class="about-content">
-      <p>
-        As a Computer Engineering student, I’m driven by curiosity and a passion for creating solutions that truly work. I enjoy diving into AI and backend systems, always eager to understand how things function beneath the surface.
-      </p>
-      <p>
-        Currently in my third year, I’m preparing for an Erasmus experience in Finland to grow both technically and personally. Looking ahead, I’m excited to specialize in AI, Cybersecurity, or Software Engineering.
-      </p>
-      <a href="/cv-marcplana.html" class="btn-cv" target="_blank" rel="noopener noreferrer">Look at my CV</a>
-    </div>
-  </section>
+<!-- ABOUT -->
+<section class="about-me" id="about-me">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <p>
+      As a Computer Engineering student, I’m driven by curiosity and a passion for creating solutions that truly work. I enjoy diving into AI and backend systems, always eager to understand how things function beneath the surface.
+    </p>
+    <p class="highlight">
+      "Committed to turning ideas into impactful digital realities."
+    </p>
+    <p>
+      Currently in my third year, I’m preparing for an Erasmus experience in Finland to grow both technically and personally. Looking ahead, I’m excited to specialize in AI, Cybersecurity, or Software Engineering.
+    </p>
 
-  <!-- CONTACT -->
-  <section class="contact-me" id="contact-me">
-    <h2>Contact Me</h2>
-    <div class="contact-links">
-      <a href="https://www.linkedin.com/in/marc-plana-villalb%C3%AD-68299a304/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-      <a href="https://github.com/mplanav" target="_blank" aria-label="GitHub">GitHub</a>
-      <a href="mailto:marc.planavillalbi@gmail.com" aria-label="Email">Email</a>
-    </div>
-  </section>
+    <a href="/cv-marcplana.html" class="btn-cv" target="_blank" rel="noopener noreferrer">Look at my CV</a>
+    <!-- Botón para descargar -->
+    <a href="/Curriculum_Marc_Plana_Villalbi.pdf" class="btn-cv" download="cv-marcplana.pdf">Download my CV</a>
+
+    <h2 style="margin-top: 4rem;">Beyond Coding</h2>
+    <p>
+      I consider myself a restless person with a constant eagerness to learn. I enjoy reading about psychology and I’m passionate about sports: going to the gym, practicing calisthenics, swimming, and especially playing football.
+    </p>
+    <p>
+      I’m also passionate about traveling and exploring new adventures, particularly through outdoor excursions and activities that allow me to disconnect and recharge.
+    </p>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-me" id="contact-me">
+  <h2>Contact Me</h2>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/marc-plana-villalb%C3%AD-68299a304/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+    <a href="https://github.com/mplanav" target="_blank" aria-label="GitHub">GitHub</a>
+    <a href="mailto:marc.planavillalbi@gmail.com" aria-label="Email">Email</a>
+  </div>
+
+  <form 
+    class="contact-form" 
+    action="https://formspree.io/f/xeozvgrp" 
+    method="POST"
+  >
+    <h3>Send me a message</h3>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required placeholder="Your name" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="_replyto" required placeholder="Your email" />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
   
   <!-- FOOTER -->
   <footer class="footer">
