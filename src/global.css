@@ -21,9 +21,8 @@ body {
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   background: var(--color1);
   color: var(--text-dark);
-  min-height: 100vh;
-  transition: background 0.3s ease;
-  overflow-x: hidden;
+  font-weight: 400; /* más fino por defecto */
+  line-height: 1.6;
 }
 
 nav {
@@ -200,10 +199,10 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
+/*.project-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(59, 130, 246, 0.5);
-}
+}*/
 
 .project-card img,
 .project-card video {
@@ -211,8 +210,6 @@ section {
   width: 50%;        /* Cambiado a la mitad del ancho */
   max-width: 350px;  /* Limitar tamaño máximo para que no se vea gigante en pantallas grandes */
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
-  transition: transform 0.3s ease;
   margin-bottom: 1rem;
 }
 
@@ -406,10 +403,10 @@ details summary {
   cursor: pointer;
   padding: 0.75rem 1.25rem;
   border-radius: 12px;
-  background: var(--color5);
-  color: var(--color4);
+  background: var(--color2);
+  color: white;
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,11 +430,11 @@ details summary::marker {
 
 details summary::after {
   content: "▸"; /* Flecha derecha */
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: transform 0.3s ease;
   display: inline-block;
   margin-left: 0.5rem;
-  color: rgb(250, 248, 248);
+  color: white;
 }
 
 /* Rotar flecha cuando details está abierto */
@@ -469,7 +466,7 @@ details > div.tech-icons {
 
 .badges-certificates h2 {
   font-size: 2rem;
-  color: var(--color5);
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -483,8 +480,8 @@ details > div.tech-icons {
   gap: 0.75rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--color4);
+  font-size: 1rem;
+  color: white;
   list-style: none;
 }
 
@@ -751,6 +748,37 @@ footer.footer a:hover {
   color: var(--color5);
   text-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
 }
+
+/* LANGUAGE SELECTOR */
+.language-selector {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: rgba(31, 41, 55, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.language-selector .lang-btn {
+  color: var(--color5);
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.25rem;
+}
+
+.language-selector .lang-btn:hover {
+  color: var(--color-accent);
+}
+
 
 @media (max-width: 900px) {
   .hero-inner {
