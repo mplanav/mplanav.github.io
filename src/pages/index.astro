@@ -187,6 +187,96 @@ import Layout from "../layouts/Layout.astro";
 
   </section>
 
+  <section class="tech-stack" id="tech-stack">
+  <h2 data-i18n="toolstech">Tools & Technologies</h2>
+  <details>
+    <summary><h3 data-i18n="languagestech">Languages</h3></summary>
+    <div class="tech-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" title="HTML" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" title="CSS" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/erlang/erlang-original.svg" alt="Erlang" title="Erlang" />
+    </div>
+  </details>
+
+  <details>
+    <summary><h3 data-i18n="frameworkslibraries">Frameworks & Libraries</h3></summary>
+    <div class="tech-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" title="Next.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg" alt="Astro" title="Astro" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" title="Express" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" title="Flask" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" title="FastAPI" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactnative/reactnative-original.svg" alt="React Native" title="React Native" />
+      <img src="/ollama.svg" alt="Ollama" title="Ollama" height="40px" width="40px"/>
+      <img src="langchain-color.svg" alt="LangChain" title="LangChain" height="40px" width="40px"/>
+    </div>
+  </details>
+
+  <details>
+    <summary><h3 data-i18n="databasestools">Databases & Tools</h3></summary>
+    <div class="tech-icons">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" title="Docker" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" title="GitHub" />
+    </div>
+  </details>
+</section>
+
+<!-- BADGES & CERTIFICATES -->
+<section class="badges-certificates" id="badges-certificates">
+  <h2 data-i18n="badgescertificates">Badges & Certificates</h2>
+  <details>
+    <summary data-i18n="viewBadges">View Badges & Certificates</summary>
+    <div class="badges-grid">
+      <!-- Ejemplos de badges -->
+      <img src="/AWS.jpg" alt="AWS skill builder" title="AWS Skill Builder" class="zoomable" />
+      <img src="/docker-cert.jpg" alt="Docker Essentials" title="Docker Essentials" class="zoomable"/>
+      <img src="/python-datascience.jpg" alt="Python for Data Science" title="Python for Data Science" class="zoomable"/>
+      <!-- Aquí podrás añadir más badges -->
+    </div>
+  </details>
+</section>
+
+<!-- MODAL -->
+<div id="img-modal" class="modal" style="display:none;">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img" />
+  <div id="caption"></div>
+</div>
+
+<script>
+  const modal = document.getElementById("img-modal")!;
+  const modalImg = document.getElementById("modal-img") as HTMLImageElement;
+  const captionText = document.getElementById("caption")!;
+  const closeBtn = modal.querySelector(".close") as HTMLElement;
+
+  document.querySelectorAll(".zoomable").forEach((img) => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = (img as HTMLImageElement).src;
+      captionText.textContent =
+        (img as HTMLImageElement).title || (img as HTMLImageElement).alt;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
+
   <!-- ABOUT -->
   <section class="about-me" id="about-me">
     <h2 data-i18n="aboutTitle">About Me</h2>
@@ -300,7 +390,13 @@ import Layout from "../layouts/Layout.astro";
         nameLabel: "Name",
         emailLabel: "Email",
         messageLabel: "Message",
-        sendButton: "Send"
+        sendButton: "Send",
+        toolstech: "Tools & Technologies",
+        languagestech: "Languages",
+        frameworkslibraries: "Frameworks & Libraries",
+        databasestools: "Databases & Tools",
+        badgescertificates: "Badges & Certificates",
+        viewBadges: "View Badges & Certificates"
       },
       es: {
         heroTitle: "Marc Plana",
@@ -365,7 +461,13 @@ import Layout from "../layouts/Layout.astro";
         nameLabel: "Nombre",
         emailLabel: "Correo",
         messageLabel: "Mensaje",
-        sendButton: "Enviar"
+        sendButton: "Enviar",
+        toolstech: "Herramientas y Tecnologías",
+        languagestech: "Lenguajes",
+        frameworkslibraries: "Frameworks y Librerías",
+        databasestools: "Bases de Datos y Herramientas",
+        badgescertificates: "Insignias y Certificados",
+        viewBadges: "Ver Insignias y Certificados"
       }
     };
 
