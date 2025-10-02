@@ -749,6 +749,66 @@ footer.footer a:hover {
   text-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
 }
 
+/* EVENTS & COMPETITIONS */
+.events {
+  background: var(--color4);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  animation: fadeInUp 1s forwards;
+  color: var(--text-dark);
+}
+
+.events h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--color5);
+  margin-bottom: 2.5rem;
+} 
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.event-card {
+  background: var(--color3);
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.25);
+  padding: 2rem;
+  display: flex !important;
+  flex-direction: column !important;  /* fuerza columna */
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  gap: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+}
+
+.event-card img {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.event-card p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+
+
 /* LANGUAGE SELECTOR */
 .language-selector {
   position: fixed;
