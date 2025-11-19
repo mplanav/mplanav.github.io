@@ -209,6 +209,7 @@ section {
   border-radius: 12px;
   width: 50%;        /* Cambiado a la mitad del ancho */
   max-width: 350px;  /* Limitar tamaño máximo para que no se vea gigante en pantallas grandes */
+  max-height: 650px;
   object-fit: cover;
   margin-bottom: 1rem;
 }
