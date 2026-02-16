@@ -857,6 +857,35 @@ footer.footer a:hover {
   color: var(--color-accent);
 }
 
+/* === TECH STACK dentro de project-card === */
+
+.project-info .tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.project-info .tech-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;          /* que se vea entero */
+  padding: 4px;
+  border-radius: 8px;
+  background: var(--color3);    /* fondo oscuro coherente */
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.project-info .tech-icons img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+}
+
 
 @media (max-width: 900px) {
   .hero-inner {
