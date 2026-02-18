@@ -362,7 +362,7 @@ import Layout from "../layouts/Layout.astro";
       <p data-i18n="aboutText3">Currently in my fourth year, Currently participating in an Erasmus exchange in Finland, strengthening my technical competencies while enriching my personal and cultural experience. Looking ahead, I’m excited to specialize in AI, Cybersecurity, or Software Engineering.</p>
 
       <a href="/cv-marcplana.html" class="btn-cv" target="_blank" rel="noopener noreferrer" data-i18n="cvButton">Look at my CV</a>
-      <a href="/Curriculum_Marc_Plana_Villalbi.pdf" class="btn-cv" download="cv-marcplana.pdf" data-i18n="downloadCV">Download my CV</a>
+      <a href="/es_Curriculum_Marc_Plana_Villalbi.pdf" class="btn-cv" download="cv-marcplana.pdf" data-i18n="downloadCV">Download my CV</a>
 
       <h2 style="margin-top: 4rem;" data-i18n="beyondCodingTitle">Beyond Coding</h2>
       <p data-i18n="beyondCodingText1">I consider myself a restless person with a constant eagerness to learn. I enjoy reading about psychology and I’m passionate about sports: going to the gym, practicing calisthenics, swimming, and especially playing football.</p>
@@ -464,7 +464,7 @@ import Layout from "../layouts/Layout.astro";
         proj11Link: "View GitHub",
         aboutTitle: "About Me",
         aboutText1: "As a Computer Engineering student, I’m driven by curiosity and a passion for creating solutions that truly work. I enjoy diving into AI and backend systems, always eager to understand how things function beneath the surface.",
-        aboutText3: "Currently participating in an Erasmus exchange in Finland, strengthening my technical competencies while enriching my personal and cultural experience. Looking ahead, I’m excited to specialize in AI, Cybersecurity, or Software Engineering.",
+        aboutText3: "Currently, I am in my fourth year and completing an internship in the Artificial Intelligence department at Cuatrecasas, where I am expanding and strengthening my knowledge in Azure, LLMs, MCPs, and prompt engineering.",
         beyondCodingTitle: "Beyond Coding",
         beyondCodingText1: "I consider myself a restless person with a constant eagerness to learn. I enjoy reading about psychology and I’m passionate about sports: going to the gym, practicing calisthenics, swimming, and especially playing football.",
         beyondCodingText2: "I’m also passionate about traveling and exploring new adventures, particularly through outdoor excursions and activities that allow me to disconnect and recharge.",
@@ -548,7 +548,7 @@ import Layout from "../layouts/Layout.astro";
         proj11Link: "Ver GitHub",
         aboutTitle: "Sobre mí",
         aboutText1: "Apasionado por la Ingeniería Informática, busco transformar ideas en soluciones efectivas. Disfruto explorando la inteligencia artificial y el desarrollo de sistemas backend, con una curiosidad constante por descubrir cómo operan los mecanismos que hacen posible la tecnología.",
-        aboutText3: "Actualmente estoy en mi cuarto año, participando en un programa Erasmus en Finlandia, fortaleciendo mis competencias profesionales y enriqueciendo mi experiencia personal e intercultural. Mirando al futuro, me emociona especializarme en IA, Ciberseguridad o Ingeniería de Software.",
+        aboutText3: "Actualmente estoy en mi cuarto año, de prácticas en el departamento de Inteligencia Artificial en Cuatrecasas, aprendiendo y impulsando mis conociemientos en Azure, LLMs, MCPs y prompt engineering.",
         beyondCodingTitle: "Más allá del código",
         beyondCodingText1: "Me considero una persona inquieta con un constante deseo de aprender. Me gusta leer sobre psicología y me apasionan los deportes: ir al gimnasio, practicar calistenia, nadar y especialmente jugar al fútbol.",
         beyondCodingText2: "También me apasiona viajar y explorar nuevas aventuras, especialmente a través de excursiones al aire libre y actividades que me permitan desconectar y recargar energías.",
@@ -580,10 +580,22 @@ import Layout from "../layouts/Layout.astro";
 
     function setLanguage(lang: Language) {
       const t = translations[lang];
+
       document.querySelectorAll<HTMLElement>("[data-i18n]").forEach((el) => {
         const key = el.dataset.i18n as keyof typeof t;
         if (key && t[key]) el.textContent = t[key];
       });
+
+      // 🔥 CAMBIO DINÁMICO DEL CV
+      const cvBtn = document.getElementById("downloadCVBtn") as HTMLAnchorElement;
+
+      if (lang === "en") {
+        cvBtn.href = "/en_Curriculum_Marc_Plana_Villalbi.pdf";
+        cvBtn.setAttribute("download", "en_Curriculum_Marc_Plana_Villalbi.pdf");
+      } else {
+        cvBtn.href = "/es_Curriculum_Marc_Plana_Villalbi.pdf";
+        cvBtn.setAttribute("download", "es_Curriculum_Marc_Plana_Villalbi.pdf");
+      }
     }
   </script>
 

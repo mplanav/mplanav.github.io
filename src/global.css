@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--color1);
   color: var(--text-dark);
   font-weight: 400; /* más fino por defecto */
@@ -398,62 +398,66 @@ section {
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
 }
 
-/* Estilo para el summary como botón */
-details summary {
-  list-style: none; /* Oculta la flecha por defecto */
+/* Contenedor details */
+details {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.2rem 0;
+  transition: all 0.3s ease;
+}
+
+/* Botón summary */
+summary {
+  list-style: none;
   cursor: pointer;
-  padding: 0.75rem 1.25rem;
-  border-radius: 12px;
-  background: var(--color2);
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  user-select: none;
-  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
-  transition: background-color 0.3s ease;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--color5);
+  transition: color 0.3s ease;
 }
 
-/* Cambio color al hover */
-details summary:hover,
-details summary:focus {
-  background: var(--color3);
-  outline: none;
+/* Quitar flecha default */
+summary::-webkit-details-marker {
+  display: none;
 }
 
-/* Flecha personalizada al lado del summary */
-details summary::marker {
-  content: none; /* ocultar marcador default */
-}
-
-details summary::after {
-  content: "▸"; /* Flecha derecha */
-  font-size: 1rem;
-  transition: transform 0.3s ease;
-  display: inline-block;
-  margin-left: 0.5rem;
-  color: white;
-}
-
-/* Rotar flecha cuando details está abierto */
-details[open] summary::after {
+/* Flecha personalizada minimal */
+summary::after {
+  content: "›";
+  font-size: 1.4rem;
   transform: rotate(90deg);
+  transition: transform 0.3s ease;
+  opacity: 0.6;
 }
 
-/* Ajustar h3 dentro del summary para que no tenga margen y color herede */
-details summary h3 {
-  margin: 0;
-  color: inherit;
-  font-weight: inherit;
-  font-size: inherit;
+/* Cuando está cerrado */
+details:not([open]) summary::after {
+  transform: rotate(0deg);
 }
 
-/* Opcional: un poco de espacio entre el summary y el contenido desplegable */
-details > div.tech-icons {
-  margin-top: 1rem;
+/* Hover más fino */
+summary:hover {
+  color: var(--color-accent);
+}
+
+/* Contenido interno */
+details > div {
+  margin-top: 1.5rem;
+  animation: fadeAccordion 0.3s ease;
+}
+
+/* Animación suave */
+@keyframes fadeAccordion {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* === BADGES & CERTIFICATES === */
