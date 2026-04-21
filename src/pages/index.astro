@@ -27,6 +27,36 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
+  <!-- FEATURED PROJECT -->
+  <section class="featured" id="featured">
+    <span class="featured-label" data-i18n="featuredLabel">Featured Project</span>
+    <div class="featured-card">
+      <video autoplay muted loop playsinline controls>
+        <source src="/prueba_final.mp4" type="video/mp4" />
+      </video>
+      <div class="featured-info">
+        <h3 data-i18n="featuredTitle">LifeOS — Personal AI Agent</h3>
+        <p data-i18n="featuredDesc">Personal AI agent built from scratch on Anthropic's Model Context Protocol. Connects Claude to Gmail, Google Calendar, local filesystem, smart notes and web search — all from a single conversational interface. A single request triggers autonomous chains of coordinated tool calls across 6 MCP servers exposing 31 tools.</p>
+        <div class="featured-meta">
+          <span>6 MCP Servers</span>
+          <span>31 Tools</span>
+          <span>Server-to-server MCP</span>
+          <span>Semantic search</span>
+          <span>Real-time streaming</span>
+        </div>
+        <div class="tech-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI" title="FastAPI" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" title="Next.js" />
+          <img src="/mcp.png" alt="MCP" title="Model Context Protocol" />
+        </div>
+        <div class="featured-links">
+          <a href="https://github.com/mplanav/LifeOS.git" target="_blank" data-i18n="featuredLink">View GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section class="projects" id="projects">
     <h2 data-i18n="projectsTitle">Projects</h2>
@@ -486,7 +516,11 @@ import Layout from "../layouts/Layout.astro";
         eventsTitle: "Engagements & Achievements",
         event1: "JunctionXVaasa Hackaton - 30h coding marathon",
         event2: "European Project Semester in Vaasa, Finland - Novia University of Applied Sciences (Aug 2025 - Dec 2025)",
-        event3: "Utopia & Distopia JUNCTION hackaton - 48h coding marathon"
+        event3: "Utopia & Distopia JUNCTION hackaton - 48h coding marathon",
+        featuredLabel: "Featured Project",
+        featuredTitle: "LifeOS — Personal AI Agent",
+        featuredDesc: "Personal AI agent built from scratch on Anthropic's Model Context Protocol. Connects Claude to Gmail, Google Calendar, local filesystem, smart notes and web search — all from a single conversational interface. A single request triggers autonomous chains of coordinated tool calls across 6 MCP servers exposing 31 tools.",
+        featuredLink: "View GitHub",
       },
       es: {
         heroTitle: "Marc Plana",
@@ -570,7 +604,11 @@ import Layout from "../layouts/Layout.astro";
         eventsTitle: "Participaciones y Logros",
         event1: "Hackatón JunctionXVaasa - Maratón de programación de 30h",
         event2: "European Project Semester en Vaasa, Finlandia - Novia University of Applied Sciences (Ago 2025 - Dic 2025)",
-        event3: "Hackatón JUNCTION sobre Utopía & Distopía - Maratón de programación de 48h"
+        event3: "Hackatón JUNCTION sobre Utopía & Distopía - Maratón de programación de 48h",
+        featuredLabel: "Proyecto Destacado",
+        featuredTitle: "LifeOS — Agente de IA Personal",
+        featuredDesc: "Agente de IA personal construido desde cero sobre el Model Context Protocol de Anthropic. Conecta Claude con Gmail, Google Calendar, sistema de archivos local, notas inteligentes y búsqueda web desde una única interfaz conversacional. Una sola petición desencadena cadenas autónomas de llamadas coordinadas a través de 6 servidores MCP que exponen 31 herramientas.",
+        featuredLink: "Ver GitHub",
       }
     };
 
