@@ -347,17 +347,67 @@ import Layout from "../layouts/Layout.astro";
   <h2 data-i18n="badgescertificates">Badges & Certificates</h2>
   <details>
     <summary data-i18n="viewBadges">View Badges & Certificates</summary>
-    <div class="badges-grid">
-      <!-- Ejemplos de badges -->
-      <img src="/AWS.jpg" alt="AWS skill builder" title="AWS Skill Builder" class="zoomable" />
-      <img src="/docker-cert.jpg" alt="Docker Essentials" title="Docker Essentials" class="zoomable"/>
-      <img src="/python-datascience.jpg" alt="Python for Data Science" title="Python for Data Science" class="zoomable"/>
-      <img src="/Intro-to-Machine-Learning.jpg" alt="Intro to Machine Learning" title="Intro to Machine Learning" class="zoomable"/>
-      <img src="/deeplearning-tensorflow.jpg" alt="Deep Learning with TensorFlow" title="Deep Learning with TensorFlow" class="zoomable"/>
-      <img src="/mcp_course.png" alt="Introduction to MCP" title="Introduction to Model Context Protocol" class="zoomable"/>
-      <img src="/claude-code.png" alt="Claude Code in Action" title="Claude Code in Action" class="zoomable" />
-      <!-- Aquí podrás añadir más badges -->
+
+    <!-- Badges generales -->
+    <div class="badges-grid"> 
     </div>
+
+    <!-- Subcarpeta kaggle -->
+    <details class="badges-subfolder">
+      <summary>
+        <img src="/kaggle.png" alt="Kaggle" width="16" height="16" />
+        <span data-i18n="ibmBadgesLabel">Kaggle</span>
+        <span class="badges-count" id="ibm-count"></span>
+      </summary>
+      <div class="badges-grid">
+        <img src="/Intro-to-Machine-Learning.jpg" alt="Intro to Machine Learning" title="Intro to Machine Learning" class="zoomable" />
+        <!-- Aquí añades los nuevos badges de Anthropic -->
+      </div>
+    </details>
+
+    <!-- Subcarpeta AWS -->
+    <details class="badges-subfolder">
+      <summary>
+        <img src="/AWS.png" alt="AWS" width="16" height="16" />
+        <span data-i18n="ibmBadgesLabel">AWS</span>
+        <span class="badges-count" id="ibm-count"></span>
+      </summary>
+      <div class="badges-grid">
+        <img src="/AWS.jpg" alt="AWS skill builder" title="AWS Skill Builder" class="zoomable" />
+        <!-- Aquí añades los nuevos badges de Anthropic -->
+      </div>
+    </details>
+
+    <!-- Subcarpeta IBM Cognitive Class -->
+    <details class="badges-subfolder">
+      <summary>
+        <img src="/IBM.png" alt="IBM - Cognitive Class" width="16" height="16" />
+        <span data-i18n="ibmBadgesLabel">IBM Cognitive Class</span>
+        <span class="badges-count" id="ibm-count"></span>
+      </summary>
+      <div class="badges-grid">
+        <img src="/docker-cert.jpg" alt="Docker Essentials" title="Docker Essentials" class="zoomable" />
+        <img src="/python-datascience.jpg" alt="Python for Data Science" title="Python for Data Science" class="zoomable" />
+        <img src="/deeplearning-tensorflow.jpg" alt="Deep Learning with TensorFlow" title="Deep Learning with TensorFlow" class="zoomable" />
+        <!-- Aquí añades los nuevos badges de Anthropic -->
+      </div>
+    </details>
+
+    <!-- Subcarpeta Anthropic -->
+    <details class="badges-subfolder">
+      <summary>
+        <img src="/anthropic.png" alt="Anthropic" width="16" height="16" />
+        <span data-i18n="anthropicBadgesLabel">Anthropic</span>
+        <span class="badges-count" id="anthropic-count"></span>
+      </summary>
+      <div class="badges-grid">
+        <img src="/mcp_course.png" alt="Introduction to MCP" title="Introduction to Model Context Protocol" class="zoomable" />
+        <img src="/claude-code.png" alt="Claude Code in Action" title="Claude Code in Action" class="zoomable" />
+        <img src="/claude101.png" alt="Claude 101" title="Claude 101" class="zoomable" />
+        <!-- Aquí añades los nuevos badges de Anthropic -->
+      </div>
+    </details>
+
   </details>
 </section>
 

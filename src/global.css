@@ -10,7 +10,7 @@
   --accent-dim:   rgba(96, 165, 250, 0.12);
 
   --text-primary:   #f1f5f9;
-  --text-secondary: #64748b;
+  --text-secondary: #bac3d0;
   --text-muted:     #334155;
 
   /* Backward compat aliases (usados en algún sitio del HTML) */
@@ -508,6 +508,62 @@ details > div {
 .badges-grid img:hover {
   transform: scale(1.04);
   border-color: rgba(96, 165, 250, 0.4);
+}
+
+/* Subcarpeta dentro de badges */
+.badges-subfolder {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+  padding: 1rem 0 0 0;
+}
+
+.badges-subfolder > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.825rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  list-style: none;
+  width: fit-content;
+}
+
+.badges-subfolder > summary::-webkit-details-marker { display: none; }
+
+.badges-subfolder > summary::after {
+  content: "+";
+  font-size: 1rem;
+  opacity: 0.4;
+  transition: transform 0.2s ease;
+  margin-left: 0.25rem;
+}
+
+.badges-subfolder[open] > summary::after {
+  transform: rotate(45deg);
+}
+
+.badges-subfolder > summary img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+}
+
+.badges-subfolder > summary:hover {
+  color: var(--text-primary);
+}
+
+.badges-count {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.1rem 0.5rem;
 }
 
 /* =============================================
